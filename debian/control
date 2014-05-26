@@ -1,0 +1,18 @@
+Source: yamlish
+Maintainer: Michael Prokop <mika@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 8~),
+               dh-python,
+               python,
+               python-setuptools
+Standards-Version: 3.9.5
+
+Package: python-yamlish
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python implementation of YAMLish
+ YAMLish is a small subset of YAML that TAP producers may use to
+ embed machine readable information in TAP diagnostics. See TAP
+ diagnostic syntax for information about how YAMLish embeds in
+ TAP.
