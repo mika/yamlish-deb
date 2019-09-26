@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function, unicode_literals
-
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
 import test
 import yamlish
 
@@ -191,10 +187,12 @@ test_data_list = [
   },
 ]
 
+
 class TestWriter(unittest.TestCase):  # IGNORE:C0111
     pass
 
-test.generate_testsuite(test_data_list, TestWriter, yamlish.dump, direction=test.OUTPUT)
+test.generate_testsuite(test_data_list, TestWriter, yamlish.dump,
+                        direction=test.OUTPUT)
 
 if __name__ == "__main__":
     unittest.main()
