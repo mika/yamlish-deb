@@ -1,11 +1,14 @@
-README.txt
-setup.cfg
+.gitignore
+.travis.yml
+README.rst
 setup.py
 yamlish.py
+test/__init__.py
 test/test_input.py
 test/test_load.py
 test/test_output.py
 test/test_reader.py
+test/test_reader_nonUTF8.py
 test/test_writer.py
 yamlish.egg-info/PKG-INFO
 yamlish.egg-info/SOURCES.txt

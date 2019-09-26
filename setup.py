@@ -1,9 +1,11 @@
 # coding: utf-8
+import os.path
+
 from setuptools import setup
+
 requires_list = [
     "PyYAML>=3.09"
 ]
-import os.path
 
 
 def read(fname):
@@ -12,19 +14,23 @@ def read(fname):
 
 setup(
     name='yamlish',
-    version="0.11",
+    version="0.18.1",
     description='Python implementation of YAMLish',
     author='Matěj Cepl',
     author_email='mcepl@redhat.com',
-    url='http://luther.ceplovi.cz/git/?p=yamlish.git;a=summary',
+    url='https://gitlab.com/mcepl/yamlish/',
     py_modules=['yamlish'],
-    long_description=read("README.txt"),
-    keywords=['TAP', 'YAML', 'yamlish'],
+    long_description=read("README.rst"),
+    keywords='TAP YAML yamlish',
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
         "Intended Audience :: Information Technology",

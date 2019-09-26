@@ -5,14 +5,11 @@ Test general output functionality.
 Without much stress on the format itself.
 """
 from __future__ import absolute_import, print_function, unicode_literals
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
 import yamlish
 import yaml
 import logging
 import tempfile
+import unittest
 
 OUT = """---
 bill-to:
@@ -74,13 +71,13 @@ IN = {
   'total': 4443.52
 }
 
+
 class TestOuptut(unittest.TestCase):
     def setUp(self):
         """
         Transform expected list into string which we actually use.
         """
         self._expected = yaml.safe_load(OUT)
-
 
     def test_file_output(self):
         """
@@ -94,7 +91,6 @@ class TestOuptut(unittest.TestCase):
         logging.debug("got_str = %s", got_str)
         got = yaml.safe_load(got_str)
         self.assertEqual(got, self._expected, "Result matches")
-
 
     def test_string_output(self):
         """
