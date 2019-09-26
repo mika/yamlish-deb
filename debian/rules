@@ -1,6 +1,10 @@
 #!/usr/bin/make -f
 
+buildvers := $(shell pyversions -sv)
+build3vers := $(shell py3versions -sv)
+export PYBUILD_NAME = yamlish
+
 %:
-	dh $@ --with python2 --buildsystem=python_distutils
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
 
